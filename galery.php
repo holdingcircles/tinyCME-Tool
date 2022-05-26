@@ -1,6 +1,5 @@
 <?php
 /*
- ROBIT BT plugins for tinyCME editor
  Image galery browser, image delete, image upload,thumblair generator.
  Accept only one image folder
  Required: PHP4 and gd.lib extension
@@ -11,10 +10,7 @@
    3. replace the image.htm in tinyCME/plugins/advimage folder
    4. copy audio.jpg, video.jpg into tinyCME/plugins/advimage folder
 
- licence: GNU/GPL
- Authot:  Tibor Fogler   foglert@robitbt.hu
-                         www.robitbt.hu
- 2008.04.20
+ 
 */
 function generate_base_url(){
   if(!$_SERVER['HTTPS'] ||$_SERVER['HTTPS'] === 'off'){
@@ -173,7 +169,7 @@ function maketable($dirname) {
                      $belyeg = './'.$AUDIOICON;
                      $belyegurl = './'.$AUDIOICON;
                 }
-                // ha még nincsbélyegkép akkor létrehozni
+                // ha mÃ©g nincsbÃ©lyegkÃ©p akkor lÃ©trehozni
                 if (!file_exists($belyeg)) {
                    if ($GDok) make_thumb($fnev,$belyeg,100,100);
 	            };
